@@ -20,13 +20,13 @@ public class Main {
         while(true) {
             for (int i = 0; i < 50; ++i) System.out.println(); // limpa a tela
             System.out.println("Bem-Vindo ao Software NotaFinal");
-            System.out.println("Oque gostaria de fazer?");
+            System.out.println("O que gostaria de fazer?");
             System.out.println("1 - Cadastrar Disciplina");
             System.out.println("2 - Cadastrar Aluno");
             System.out.println("3 - Consultas");
             System.out.print("Digite o numero correspondente: ");
 
-            controle_cli = input.nextInt();          // variaveis que vao gaurdar e manipulas as infos q o usuario colocar
+            controle_cli = input.nextInt();          // variaveis que vao guardar e manipulas as infos q o usuario colocar
             int text_controle_cli;
             boolean controle_disciplina_existente;
             boolean controle_aluno_existente;
@@ -169,7 +169,7 @@ public class Main {
                 int controle_nusp;
                 boolean ind;
 
-                System.out.println("Qual consulta gostaria de ralizar?");
+                System.out.println("Qual consulta gostaria de realizar?");
                 System.out.println("1 - Qntd de alunos matriculados na disciplina");
                 System.out.println("2 - Qntd de alunos aprovados na dsiciplina");
                 System.out.println("3 - Qntd de alunos reprovados na disiciplina");
