@@ -32,9 +32,9 @@ public class Main {
             boolean controle_aluno_existente;
             String texto_converter;
             int numero_usp;
-            int nota_p1;
-            int nota_p2;
-            int nota_p3;
+            double nota_p1;
+            double nota_p2;
+            double nota_p3;
             double mediafinal;
             int controle_cod_disciplina;
             int indice = 0;
@@ -95,11 +95,11 @@ public class Main {
                         System.out.println("Qual o numero usp do aluno:"); //pede as infos p cadastrar aluno
                         numero_usp = input.nextInt();
                         System.out.println("Qual a nota da P1:");
-                        nota_p1 = input.nextInt();
+                        nota_p1 = input.nextDouble();
                         System.out.println("Qual a nota da P2:");
-                        nota_p2 = input.nextInt();
+                        nota_p2 = input.nextDouble();
                         System.out.println("Qual a nota da P3:");
-                        nota_p3 = input.nextInt();
+                        nota_p3 = input.nextDouble();
 
                         text_controle_cli = numero_usp;
                         texto_converter = Integer.toString(text_controle_cli);
@@ -418,7 +418,7 @@ public class Main {
                             for (int j = 0; j < disciplinas.get(i).lista_alunos.size(); j++) {
                                 if (disciplinas.get(i).lista_alunos.get(j).getAprovacao()) {//checa os alunos aprovados e printa
 
-                                    System.out.printf("NUSP: %d  MF: %f\n", disciplinas.get(i).lista_alunos.get(j).getNUSP(),disciplinas.get(i).lista_alunos.get(j).getMediaFinal());
+                                    System.out.printf("NUSP: %d P1: %f P2: %f P3: %f MF: %f\n", disciplinas.get(i).lista_alunos.get(j).getNUSP(),disciplinas.get(i).lista_alunos.get(j).getP1(),disciplinas.get(i).lista_alunos.get(j).getP2(),disciplinas.get(i).lista_alunos.get(j).getP3(),disciplinas.get(i).lista_alunos.get(j).getMediaFinal());
 
                                 }
 
@@ -457,7 +457,8 @@ public class Main {
                             for (int j = 0; j < disciplinas.get(i).lista_alunos.size(); j++) {
                                 if (!disciplinas.get(i).lista_alunos.get(j).getAprovacao()) {//checa os alunos reprovados e printa
 
-                                    System.out.printf("NUSP: %d  MF: %f\n", disciplinas.get(i).lista_alunos.get(j).getNUSP(),disciplinas.get(i).lista_alunos.get(j).getMediaFinal());
+
+                                    System.out.printf("NUSP: %d P1: %f P2: %f P3: %f MF: %f\n", disciplinas.get(i).lista_alunos.get(j).getNUSP(),disciplinas.get(i).lista_alunos.get(j).getP1(),disciplinas.get(i).lista_alunos.get(j).getP2(),disciplinas.get(i).lista_alunos.get(j).getP3(),disciplinas.get(i).lista_alunos.get(j).getMediaFinal());
 
                                 }
 

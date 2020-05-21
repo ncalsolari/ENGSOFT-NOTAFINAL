@@ -12,7 +12,7 @@ public class Disciplina {
         codigo = cod;
     }
 
-    public void setNovoAluno(int nusp, int p1, int p2, int p3){
+    public void setNovoAluno(int nusp, double p1, double p2, double p3){
 
         lista_alunos.add(new Estudante(nusp,p1,p2,p3));
 

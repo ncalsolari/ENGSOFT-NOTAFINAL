@@ -4,7 +4,7 @@
 public class Estudante {
 
     private int nusp;
-    private int p1,p2,p3;
+    private double p1,p2,p3;
     private double mediafinal;
     private boolean aprovacao;
 
@@ -24,7 +24,7 @@ public class Estudante {
 
     }
 
-    public Estudante(int numero, int nota1, int nota2, int nota3){
+    public Estudante(int numero, double nota1, double nota2, double nota3){
         nusp = numero;
         p1=nota1;
         p2=nota2;
@@ -52,15 +52,15 @@ public class Estudante {
         return this.aprovacao;
     }
 
-    public int getP1(){
+    public double getP1(){
         return  this.p1;
     }
 
-    public int getP2(){
+    public double getP2(){
         return  this.p2;
     }
 
-    public int getP3(){
+    public double getP3(){
         return  this.p3;
     }
 
