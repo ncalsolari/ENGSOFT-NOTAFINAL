@@ -1,7 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+
 
 public class Disciplina {
 
@@ -49,6 +47,29 @@ public class Disciplina {
         return qnt_reprovados;
     }
 
+
+    public int AlunoExiste(int nusp){
+
+        for(int i=0; i<lista_alunos.size(); i++){
+            if (lista_alunos.get(i).getNUSP() == nusp){
+                return 1;
+            }
+        }
+
+        return 0;
+
+    }
+
+    public int getCod(){
+        return this.codigo;
+    }
+
+
+
+
+    /*
+
+
     public int getNotaAlunoP1(int nusp){
 
         for(int i=0; i<lista_alunos.size(); i++){
@@ -85,21 +106,6 @@ public class Disciplina {
 
     }
 
-    public int AlunoExiste(int nusp){
-
-        for(int i=0; i<lista_alunos.size(); i++){
-            if (lista_alunos.get(i).getNUSP() == nusp){
-                return 1;
-            }
-        }
-
-        return 0;
-
-    }
-
-    public int getCod(){
-        return this.codigo;
-    }
 
     public double getMediaAluno(int nusp){
 
@@ -139,6 +145,8 @@ public class Disciplina {
         return 0;
 
     }
+
+     */
 
 
 }

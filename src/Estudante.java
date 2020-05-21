@@ -40,19 +40,6 @@ public class Estudante {
     }
 
 
-    public void setNUSP(int num_usp){
-        this.nusp = num_usp;
-    }
-
-
-
-    public void setNota(int nota1, int nota2, int nota3){
-        this.p1 = nota1;
-        this.p2 = nota2;
-        this.p3 = nota3;
-    }
-
-
     public double getMediaFinal() {
         return  this.mediafinal;
     }
@@ -76,4 +63,18 @@ public class Estudante {
     public int getP3(){
         return  this.p3;
     }
+
+
+    /*
+    public void setNUSP(int num_usp){
+        this.nusp = num_usp;
+    }
+
+    public void setNota(int nota1, int nota2, int nota3){
+        this.p1 = nota1;
+        this.p2 = nota2;
+        this.p3 = nota3;
+    }
+
+*/
 }
