@@ -8,6 +8,33 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static int validaCodigoDisciplina(String codigo){
+        if(codigo.length() != 4){
+            return 0;
+        }else{
+            return 1;
+        }
+
+    }
+
+    public static int validaNUSP(String codigo){
+        if(codigo.length() != 7){
+            return 0;
+        }else{
+            return 1;
+        }
+
+    }
+
+    public static int validaNota(double n1, double n2, double n3){
+        if(0 <= n1 && n1 <= 10 && 0 <= n2 && n2 <= 10 && 0 <= n3 && n3 <= 10){
+            return 1;
+        }else{
+            return 0;
+        }
+
+    }
+
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -18,6 +45,8 @@ public class Main {
         ArrayList<Disciplina> disciplinas = new ArrayList();// lista das disciplinas
 
         while(true) {
+
+
             for (int i = 0; i < 50; ++i) System.out.println(); // limpa a tela
             System.out.println("Bem-Vindo ao Software NotaFinal");
             System.out.println("O que gostaria de fazer?");
@@ -53,7 +82,9 @@ public class Main {
                 text_controle_cli = controle_cli;
                 texto_converter = Integer.toString(text_controle_cli);
 
-                if (texto_converter.length() != 4) {      //checa se o tamanho ta certo
+
+
+                if (validaCodigoDisciplina(texto_converter)==0) {      //checa se o tamanho ta certo
                     System.out.println("Codigo Invalido");
                     Thread.sleep(2000);
                 } else {
@@ -104,12 +135,12 @@ public class Main {
                         text_controle_cli = numero_usp;
                         texto_converter = Integer.toString(text_controle_cli);
 
-                        if (texto_converter.length() != 7) {      //checa se tamno no nusp eh valido
+                        if (validaNUSP(texto_converter) == 0) {      //checa se tamno no nusp eh valido
                             System.out.println("NumeroUsp Invalido");
                             Thread.sleep(2000);
                         } else {
                             if (disciplinas.get(i).lista_alunos.size() == 0) {  //se a lista ta vazia ja adiciona
-                                if (0 <= nota_p1 && nota_p1 <= 10 && 0 <= nota_p2 && nota_p2 <= 10 && 0 <= nota_p3 && nota_p3 <= 10) {
+                                if (validaNota(nota_p1,nota_p2,nota_p3) == 1) {
                                     disciplinas.get(i).setNovoAluno(numero_usp, nota_p1, nota_p2, nota_p3);
                                     System.out.println("Aluno Adicionado");
                                     Thread.sleep(2000);
@@ -127,7 +158,7 @@ public class Main {
                                         Thread.sleep(2000);
                                     } else {
                                                 //checa se as notas sao validas
-                                        if (0 <= nota_p1 && nota_p1 <= 10 && 0 <= nota_p2 && nota_p2 <= 10 && 0 <= nota_p3 && nota_p3 <= 10) {
+                                        if (validaNota(nota_p1,nota_p2,nota_p3)==1) {
                                             disciplinas.get(i).setNovoAluno(numero_usp, nota_p1, nota_p2, nota_p3);
                                             System.out.println("Aluno Adicionado");
                                             j = disciplinas.get(i).lista_alunos.size();
@@ -268,7 +299,7 @@ public class Main {
                             text_controle_cli = numero_usp;
                             texto_converter = Integer.toString(text_controle_cli);
 
-                            if (texto_converter.length() != 7) {  //checa tamanho do nusp
+                            if (validaNUSP(texto_converter) == 0) {  //checa tamanho do nusp
                                 System.out.println("NumeroUsp Invalido");
                                 Thread.sleep(2000);
                             } else {
@@ -483,4 +514,7 @@ public class Main {
         }
 
     }
+
+
+
 }
